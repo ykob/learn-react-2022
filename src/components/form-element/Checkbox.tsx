@@ -1,8 +1,8 @@
 import React, { useId, useMemo, useRef, useState } from 'react'
 
-export const CheckBox = () => {
+export const CheckBox = ({ name }: { name: string }) => {
   const element = useRef<HTMLInputElement>(null)
-  const id = useId();
+  const id = useId()
   const [checked, setChecked] = useState(false)
 
   const handleClick = useMemo(() => {
@@ -12,17 +12,16 @@ export const CheckBox = () => {
   }, [])
 
   return (
-    <label htmlFor={id} className="flex">
+    <div className="flex gap-1">
       <input
         checked={checked}
         id={id}
+        name={name}
         ref={element}
         type="checkbox"
         onChange={handleClick}
       />
-      <div>
-        {checked}
-      </div>
-    </label>
+      <label htmlFor={id}>{String(checked)}</label>
+    </div>
   )
 }
