@@ -1,5 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import { CheckBox } from './components/form-element/Checkbox'
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function Home() {
   return (
     <div>
       <h2>Home</h2>
+      <CheckBox />
     </div>
   )
 }
