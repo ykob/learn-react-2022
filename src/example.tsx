@@ -1,9 +1,9 @@
 import React from 'react'
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <div>
         <ul>
           <li>
@@ -25,7 +25,7 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </div>
-    </Router>
+    </BrowserRouter>
   )
 }
 
