@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
-import { CheckBox } from './components/form-element/Checkbox'
+import { Home } from './views/Home'
 
 function App() {
   return (
@@ -27,15 +27,6 @@ function App() {
         </Routes>
       </div>
     </BrowserRouter>
-  )
-}
-
-function Home() {
-  return (
-    <div>
-      <h2>Home</h2>
-      <CheckBox name="checkbox" />
-    </div>
   )
 }
 
