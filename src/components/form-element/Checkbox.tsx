@@ -1,15 +1,16 @@
-import React, { useId, useMemo, useRef, useState } from 'react'
+import React, { ChangeEventHandler, memo, useId, useRef } from 'react'
 
-export const CheckBox = ({ name }: { name: string }) => {
+export const CheckBox = memo(({
+  checked,
+  onChange,
+  name,
+}: {
+  checked: boolean
+  onChange: ChangeEventHandler<HTMLInputElement>
+  name: string
+}) => {
   const element = useRef<HTMLInputElement>(null)
   const id = useId()
-  const [checked, setChecked] = useState(false)
-
-  const handleClick = useMemo(() => {
-    return (e: React.ChangeEvent<HTMLInputElement>) => {
-      setChecked(e.currentTarget.checked)
-    }
-  }, [])
 
   return (
     <div className="flex gap-1">
@@ -19,9 +20,9 @@ export const CheckBox = ({ name }: { name: string }) => {
         name={name}
         ref={element}
         type="checkbox"
-        onChange={handleClick}
+        onChange={onChange}
       />
       <label htmlFor={id}>{String(checked)}</label>
     </div>
   )
-}
+})
