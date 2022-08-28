@@ -5,7 +5,7 @@ import { Home } from './views/Home'
 function App() {
   return (
     <BrowserRouter>
-      <div>
+      <div className="m-8">
         <ul>
           <li>
             <Link to="/">Home</Link>
