@@ -1,21 +1,15 @@
 import React from 'react'
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Home } from './views/Home'
+import { Form } from './views/Form'
 
 function App() {
   return (
     <BrowserRouter>
       <div className="m-8">
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-        </ul>
-
-        <hr />
-
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/form" element={<Form />} />
         </Routes>
       </div>
     </BrowserRouter>
