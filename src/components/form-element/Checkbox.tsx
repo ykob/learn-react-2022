@@ -1,21 +1,14 @@
-import React, { memo, useId, useRef } from 'react'
+import React from 'react'
 
-export const CheckBox = memo(
-  ({ name, value }: { name: string; value: string }) => {
-    const element = useRef<HTMLInputElement>(null)
-    const id = useId()
+interface Props extends React.ComponentProps<'input'> {
+  label: string
+}
 
-    return (
-      <div className="flex gap-1">
-        <input
-          id={id}
-          name={name}
-          ref={element}
-          type="checkbox"
-          value={value}
-        />
-        <label htmlFor={id}>{name}</label>
-      </div>
-    )
-  }
-)
+export const CheckBox: React.FC<Props> = ({ label, ...props }) => {
+  return (
+    <label className="flex gap-1">
+      <input {...props} type="checkbox" />
+      <span>{label}</span>
+    </label>
+  )
+}
