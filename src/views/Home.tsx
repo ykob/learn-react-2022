@@ -9,6 +9,9 @@ export function Home() {
         <li>
           <Link to="/form">Form</Link>
         </li>
+        <li>
+          <Link to="/react-hook-form">React Hook Form</Link>
+        </li>
       </ul>
     </div>
   )
