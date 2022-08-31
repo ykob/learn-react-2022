@@ -1,27 +1,24 @@
-import React, { useState, useMemo, useCallback } from 'react'
+import React, { useRef } from 'react'
 import { CheckBox } from '../components/form-element/Checkbox'
 
 export function Form() {
-  const [checked, setChecked] = useState(false)
-
-  const onChange = useMemo(() => {
-    return (e: React.ChangeEvent<HTMLInputElement>) => {
-      setChecked(e.currentTarget.checked)
-    }
-  }, [])
-
-  const onChangeParent = useCallback(() => {
-    setChecked(!checked)
-  }, [checked])
-
+  const ref = useRef<HTMLInputElement>(null)
+  const onSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
+    e.preventDefault()
+    console.log(e.currentTarget.checkbox)
+  }
   return (
     <div>
-      <h1 className='text-5xl mb-4'>Form</h1>
-      <div>
-        Checked: {String(checked)}
-      </div>
-      <button onClick={onChangeParent}>check</button>
-      <CheckBox checked={checked} name="checkbox" onChange={onChange} />
+      <h1 className="text-5xl mb-4">Form</h1>
+      <form onSubmit={onSubmit}>
+        <input type="text" name="text" ref={ref} />
+        <div className='flex gap-4'>
+          <CheckBox name="checkbox" value="checkbox1" />
+          <CheckBox name="checkbox" value="checkbox2" />
+          <CheckBox name="checkbox" value="checkbox3" />
+        </div>
+        <button>Submit</button>
+      </form>
     </div>
   )
 }
