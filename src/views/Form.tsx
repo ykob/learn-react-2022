@@ -1,5 +1,5 @@
 import React, { useRef } from 'react'
-import { CheckBox } from '../components/form-element/Checkbox'
+import { CheckBox } from '../components/form-element/CheckBox'
 import { RadioButton } from '../components/form-element/RadioButton'
 
 export function Form() {
