@@ -1,12 +1,12 @@
 import React, { useRef } from 'react'
 import { CheckBox } from '../components/form-element/Checkbox'
+import { RadioButton } from '../components/form-element/RadioButton'
 
 export function Form() {
   const ref = useRef<HTMLFormElement>(null)
 
   const onSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault()
-    console.log(ref.current)
   }
 
   return (
@@ -14,6 +14,11 @@ export function Form() {
       <h1 className="text-5xl mb-4">Form</h1>
       <form onSubmit={onSubmit} ref={ref}>
         <input type="text" name="text" />
+        <div className="flex gap-4">
+          <RadioButton name="radioButton" label="Checkbox1" value="radioButton1" />
+          <RadioButton name="radioButton" label="Checkbox2" value="radioButton2" />
+          <RadioButton name="radioButton" label="Checkbox3" value="radioButton3" />
+        </div>
         <div className="flex gap-4">
           <CheckBox name="checkbox" label="Checkbox1" value="checkbox1" />
           <CheckBox name="checkbox" label="Checkbox2" value="checkbox2" />
