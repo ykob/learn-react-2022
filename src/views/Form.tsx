@@ -1,7 +1,5 @@
 import React, { useRef } from 'react'
-import { CheckBox } from '../components/form-element/CheckBox'
-import { InputText } from '../components/form-element/InputText'
-import { RadioButton } from '../components/form-element/RadioButton'
+import { CheckBox, InputText, RadioButton } from '../components/form-element/'
 
 export function Form() {
   const ref = useRef<HTMLFormElement>(null)
