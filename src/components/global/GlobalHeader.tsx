@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Icon from '@mdi/react'
+import { mdiGithub } from '@mdi/js'
 
 export const GlobalHeader: React.FC = () => {
   return (
@@ -13,7 +15,7 @@ export const GlobalHeader: React.FC = () => {
           target="_blank"
           rel="noreferrer"
         >
-          Github
+          <Icon path={mdiGithub} size={1} />
         </a>
       </div>
     </header>
