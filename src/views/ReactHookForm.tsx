@@ -11,7 +11,7 @@ export function ReactHookForm() {
   const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data)
 
   return (
-    <>
+    <div>
       <h1 className="text-5xl mb-4">React Hook Form</h1>
       <ul className="mb-4">
         <li>
@@ -61,6 +61,6 @@ export function ReactHookForm() {
           <input type="submit" />
         </div>
       </form>
-    </>
+    </div>
   )
 }

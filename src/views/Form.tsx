@@ -12,7 +12,7 @@ export function Form() {
   }
 
   return (
-    <>
+    <div>
       <h1 className="text-5xl mb-4">Form</h1>
       <form onSubmit={onSubmit} ref={ref}>
         <div className="mb-2">
@@ -42,6 +42,6 @@ export function Form() {
         </div>
         <button>Submit</button>
       </form>
-    </>
+    </div>
   )
 }
