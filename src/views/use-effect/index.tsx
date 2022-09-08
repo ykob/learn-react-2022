@@ -12,7 +12,7 @@ export function UseEffect() {
         <div>countA : {countA}</div>
         <div>countB : {countB}</div>
       </div>
-      <div className="flex gap-4">
+      <div className="flex gap-4 mb-4">
         <button onClick={() => setCountA(countA + 1)}>add countA</button>
         <button onClick={() => setCountB(countB + 1)}>add countB</button>
       </div>

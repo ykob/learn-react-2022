@@ -14,7 +14,7 @@ export const EffectCounter: React.FC<Props> = memo((props) => {
 
   return (
     <div>
-      <div>This is count with useEffect : {count}</div>
+      <div>This is count in the child component (depending on countA) : {count}</div>
     </div>
   )
 })
