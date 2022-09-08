@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './index.css'
 import App from './example'
 import reportWebVitals from './reportWebVitals'
-import { Form, Home, ReactHookForm } from './views/'
+import { Form, Home, ReactHookForm, UseEffect } from './views/'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
@@ -15,6 +15,7 @@ root.render(
           <Route path="" element={<Home />} />
           <Route path="form" element={<Form />} />
           <Route path="react-hook-form" element={<ReactHookForm />} />
+          <Route path="use-effect" element={<UseEffect />} />
         </Route>
       </Routes>
     </BrowserRouter>
