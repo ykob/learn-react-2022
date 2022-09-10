@@ -14,8 +14,12 @@ export function UseEffect() {
         <div>countB : {countB}</div>
       </div>
       <div className="flex gap-4 mb-4">
-        <ButtonFill onClick={() => setCountA(countA + 1)}>add countA</ButtonFill>
-        <ButtonFill onClick={() => setCountB(countB + 1)}>add countB</ButtonFill>
+        <ButtonFill onClick={() => setCountA(countA + 1)}>
+          add countA
+        </ButtonFill>
+        <ButtonFill onClick={() => setCountB(countB + 1)}>
+          add countB
+        </ButtonFill>
       </div>
       <EffectCounter count={countA} />
     </div>
