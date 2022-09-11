@@ -1,10 +1,17 @@
-import React, { useState } from 'react'
+import React, { useCallback, useState } from 'react'
 import { ButtonFill } from '../../components/button'
 import { EffectCounter } from './EffectCounter'
 
 export function UseEffect() {
   const [countA, setCountA] = useState(0)
   const [countB, setCountB] = useState(0)
+
+  const handleSetCountA = useCallback(() => {
+    setCountA(countA + 1)
+  }, [countA])
+  const handleSetCountB = useCallback(() => {
+    setCountB(countB + 1)
+  }, [countB])
 
   return (
     <div>
@@ -14,10 +21,10 @@ export function UseEffect() {
         <div>countB : {countB}</div>
       </div>
       <div className="flex gap-4 mb-4">
-        <ButtonFill onClick={() => setCountA(countA + 1)}>
+        <ButtonFill onClick={handleSetCountA}>
           add countA
         </ButtonFill>
-        <ButtonFill onClick={() => setCountB(countB + 1)}>
+        <ButtonFill onClick={handleSetCountB}>
           add countB
         </ButtonFill>
       </div>
