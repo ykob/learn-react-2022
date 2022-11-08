@@ -1,14 +1,14 @@
-import React from 'react'
+import { ComponentProps, FC, memo } from 'react'
 
-interface Props extends React.ComponentProps<'input'> {
+interface Props extends ComponentProps<'input'> {
   label: string
 }
 
-export const CheckBox: React.FC<Props> = ({ label, ...props }) => {
+export const CheckBox: FC<Props> = memo(({ label, ...props }) => {
   return (
     <label className="flex gap-1">
       <input {...props} type="checkbox" />
       <span>{label}</span>
     </label>
   )
-}
+})

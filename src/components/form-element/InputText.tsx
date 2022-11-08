@@ -1,5 +1,7 @@
-import React from 'react'
+import { ComponentProps, FC, memo } from 'react'
 
-export const InputText: React.FC<React.ComponentProps<'input'>> = (props) => {
-  return <input {...props} className="border border-black p-1 rounded" type="text" />
-}
+export const InputText: FC<ComponentProps<'input'>> = memo((props) => {
+  return (
+    <input {...props} className="border border-black p-1 rounded" type="text" />
+  )
+})
