@@ -1,5 +1,6 @@
-import { ButtonFill } from './ButtonFill'
+import { ButtonFill, ButtonFillLink } from './ButtonFill'
 
 export {
   ButtonFill,
+  ButtonFillLink,
 }

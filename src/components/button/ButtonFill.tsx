@@ -1,11 +1,11 @@
-import { ComponentProps, createElement } from 'react'
+import { ComponentProps, createElement, memo } from 'react'
 
 type Tags = 'button' | 'a'
 type Props<T extends Tags> = ComponentProps<T> & {
   as?: T
 }
 
-export const ButtonFill = <T extends Tags = 'button'>({
+const ButtonFillBase = <T extends Tags = 'button'>({
   as,
   children,
   className,
@@ -22,3 +22,6 @@ export const ButtonFill = <T extends Tags = 'button'>({
     children
   )
 }
+
+export const ButtonFill = memo<Props<'button'>>(ButtonFillBase)
+export const ButtonFillLink = memo<Props<'a'>>(ButtonFillBase)
