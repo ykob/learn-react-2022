@@ -16,7 +16,10 @@ export function Form() {
       <h1 className="text-5xl mb-4">Form</h1>
       <form onSubmit={onSubmit} ref={ref}>
         <div className="mb-2">
-          <InputText type="text" name="text" />
+          <InputText name="text" />
+        </div>
+        <div className="mb-2">
+          <InputText type="number" name="number" />
         </div>
         <div className="flex gap-4 mb-2">
           <RadioButton
