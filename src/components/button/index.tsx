@@ -1,6 +1,1 @@
-import { ButtonFill, ButtonFillLink } from './ButtonFill'
-
-export {
-  ButtonFill,
-  ButtonFillLink,
-}
+export { ButtonFill, ButtonFillLink } from './ButtonFill'
